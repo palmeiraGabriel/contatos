@@ -56,7 +56,11 @@ export class ContatoService {
   constructor() { }
 
   getContatos():Contato[]{
-     return BASE_DE_CONTATOS 
+     return BASE_DE_CONTATOS;
+  }
+
+  addContato(c:Contato):void{
+    BASE_DE_CONTATOS.push(c);
   }
 
 }

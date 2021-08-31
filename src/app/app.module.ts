@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { ListaDeContatosComponent } from './components/lista-de-contatos/lista-de-contatos.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { CreateContatoComponent } from './components/create-contato/create-contato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContatoComponent,
     ListaDeContatosComponent,
-    MenuComponent
+    MenuComponent,
+    CreateContatoComponent
   ],
   imports: [
     BrowserModule,
