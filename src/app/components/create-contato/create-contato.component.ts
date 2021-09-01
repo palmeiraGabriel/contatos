@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Contato } from 'src/app/models/Contato';
+import { ContatoService } from 'src/app/service/contato.service';
 
 @Component({
   selector: 'app-create-contato',
@@ -15,6 +16,8 @@ export class CreateContatoComponent implements OnInit {
     email:'',
     telefones: ['']
   }
+
+  cs:ContatoService = new ContatoService;
 
   constructor() { }
 
@@ -33,8 +36,17 @@ export class CreateContatoComponent implements OnInit {
     this.novoContato.telefones.push('')
   }
 
-  removeTelefone(t:any){
-    this.novoContato.telefones.splice(this.novoContato.telefones.indexOf(t),1)
+  salvar(){
+    this.cs.addContato(this.novoContato);
+    this.novoContato = {
+      name:'',
+      email:'',
+      telefones: ['']
+    }   
+  }
+
+  removeTelefone(i:number):void{
+    this.novoContato.telefones.splice(i,1)
   }
 
 }
