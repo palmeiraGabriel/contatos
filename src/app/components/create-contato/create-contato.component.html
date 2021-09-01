@@ -12,8 +12,8 @@
             Telefone:
             <div *ngFor="let telefone of novoContato.telefones; let i = index;  trackBy: track">
                 <input type="tel" name="telefone_{{i}}"  [(ngModel)]="novoContato.telefones[i]">
-                <a *ngIf="i==0" ><i class="material-icons">add_circle</i></a>
-                <a class="remove" *ngIf="i!=0" ><i class="material-icons">remove_circle</i></a>
+                <a *ngIf="i==0" (click)="addTelefone()"><i class="material-icons">add_circle</i></a>
+                <a class="remove" *ngIf="i!=0" (click)="removeTelefone(i)"><i class="material-icons">remove_circle</i></a>
             </div>
         </label>
         <div class="controles">

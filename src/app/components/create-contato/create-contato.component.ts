@@ -29,5 +29,12 @@ export class CreateContatoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addTelefone(){
+    this.novoContato.telefones.push('')
+  }
+
+  removeTelefone(t:any){
+    this.novoContato.telefones.splice(this.novoContato.telefones.indexOf(t),1)
+  }
 
 }
