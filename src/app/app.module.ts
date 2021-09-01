@@ -7,6 +7,7 @@ import { ContatoComponent } from './components/contato/contato.component';
 import { ListaDeContatosComponent } from './components/lista-de-contatos/lista-de-contatos.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CreateContatoComponent } from './components/create-contato/create-contato.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CreateContatoComponent } from './components/create-contato/create-conta
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
